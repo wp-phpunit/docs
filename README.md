@@ -83,7 +83,13 @@ Create a `wp-tests-config.php` file
 curl -sSL -o wp-tests-config.php https://github.com/WordPress/wordpress-develop/raw/master/wp-tests-config-sample.php
 ```
 
-Modify this file as necessary as you will likely want to commit it to version control. Be sure not to hardcode any sensitive data into it. Instead you may consider using something like [`phpdotenv`](https://github.com/vlucas/phpdotenv) to set your keys and secrets in a `.env` file which is then loaded as environment values.
+Modify this file as necessary as you will likely want to commit it to version control. Be sure not to hardcode any sensitive data into it. Instead you may consider using something like [`phpdotenv`](https://github.com/vlucas/phpdotenv) to set your keys and secrets in a `.env` file which are then loaded as environment variables.
+
+### Table Prefix (optional)
+
+You may also configure the table prefix which you want to use for your tests.
+
+This is configurable by setting the `WP_PHPUNIT__TABLE_PREFIX` environment variable. If set, this will take precedence over what is set in your tests config file. If not, **and the `$table_prefix` variable is not set in your tests config file** then it will use `wptests_` as a fallback. 
 
 ## Examples
 
