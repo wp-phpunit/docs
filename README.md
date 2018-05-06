@@ -47,7 +47,7 @@ composer require wp-phpunit/wp-phpunit --dev
 
 Because WP PHPUnit is a simple versioned subset mirror of WordPress core, it shares the same tag as the version it was built from.
 
-Install a the version for a specific version of WordPress
+Install the version for a specific version of WordPress
 
 ```sh
 composer require wp-phpunit/wp-phpunit:4.9.1 --dev
