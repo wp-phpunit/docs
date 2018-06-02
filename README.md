@@ -113,6 +113,7 @@ https://github.com/wp-cli/scaffold-command/blob/04be3128e743a0d94a1db5b7da942b53
 
 ```
 
-**Example Project**
+**Complete Working Examples**
 
-Check out the [`wp-phpunit/example-project`](https://github.com/wp-phpunit/example-project) for a complete working example.
+- [`wp-phpunit/example-project`](https://github.com/wp-phpunit/example-project)
+- [`wp-phpunit/example-plugin`](https://github.com/wp-phpunit/example-plugin)
