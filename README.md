@@ -11,8 +11,6 @@
 
 WP PHPUnit is the WordPress PHPUnit unit test library included in the WordPress core develop repository, made installable via Composer. The primary goal is to make getting up and running with your tests much faster. Rather than tracking down a script or copying from project to project, you have a single package to add to your development dependencies.
 
-This project is not intended to be a drop-in replacement for the ubiquitous `install-wp-tests.sh` script but aimed at simplifying and streamlining local development.
-
 **Why?**
 
 The core PHPUnit test library is a fundamental library for writing PHPUnit tests with WordPress. Historically, it has only been available to install via SVN checkout, usually from a `install-wp-tests.sh` script.
@@ -117,3 +115,7 @@ https://github.com/wp-cli/scaffold-command/blob/04be3128e743a0d94a1db5b7da942b53
 
 - [`wp-phpunit/example-project`](https://github.com/wp-phpunit/example-project)
 - [`wp-phpunit/example-plugin`](https://github.com/wp-phpunit/example-plugin)
+
+**WP PHPUnit in the Wild**
+
+- [Packages that require wp-phpunit](https://packagist.org/packages/wp-phpunit/wp-phpunit/dependents)
