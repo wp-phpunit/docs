@@ -4,6 +4,7 @@
 
 - [Overview](#overview)
 - [Installation](#installation)
+- [PHPUnit Compatibility](#phpunit-compatibility)
 - [Configuration](#configuration)
 - [Examples](#examples)
 
@@ -50,6 +51,10 @@ Install the version for a specific version of WordPress
 ```sh
 composer require wp-phpunit/wp-phpunit:4.9.1 --dev
 ```
+
+## PHPUnit Compatibility
+
+The library is compatible with PHPUnit 3.6+, 4, 5, and support for PHPUnit 6 was added in WordPress 4.8. Support for PHPUnit 7 is not yet available, but in the works (see [#43218](https://core.trac.wordpress.org/ticket/43218)). 
 
 ## Configuration
 
