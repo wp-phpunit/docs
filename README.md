@@ -41,7 +41,7 @@ WP PHPUnit solves this by including this file in the package source which acts a
 Install the latest version
 
 ```sh
-composer require wp-phpunit/wp-phpunit --dev
+composer require wp-phpunit/wp-phpunit yoast/phpunit-polyfills --dev
 ```
 
 Because WP PHPUnit is a simple versioned subset mirror of WordPress core, it shares the same tag as the version it was built from.
@@ -52,13 +52,27 @@ Install the version for a specific version of WordPress
 composer require wp-phpunit/wp-phpunit:4.9.1 --dev
 ```
 
+### `yoast/phpunit-polyfills`
+
+As of WordPress 5.8.2 (and the latest versions of previous major releases), the [Yoast PHPUnit Polyfills](https://github.com/Yoast/PHPUnit-Polyfills) package was added as a required dependency of the PHPUnit infrastructure in WordPress core which makes up the source of WP PHPUnit. Unlike normal Composer packages, this will not be installed automatically for you as it is not a dependency of `wp-phpunit/wp-phpunit`. Just like WordPress itself it must be provided separately, although not to worry as this is very easy and can be done as part of the initial install as well (see above).
+
+If you're already using WP PHPunit and are seeing errors about this after upgrading, simply require the package with Composer as a dev dependency and you should be all set:
+
+```sh
+composer require --dev yoast/phpunit-polyfills
+```
+
+See https://github.com/Yoast/PHPUnit-Polyfills for more information.
+
 ## PHPUnit Compatibility
 
 The library is compatible with PHPUnit 3.6+, 4, 5, and support for newer versions of PHPUnit have been added since.
 
-* Support for PHPUnit 6 was added in WordPress 4.8.
-* Support for PHPUnit 7 was added in WordPress 5.1.
-* Support for PHPUnit 8 is not yet available, but in the works (see [#46149](https://core.trac.wordpress.org/ticket/46149)). 
+* Support for PHPUnit 6 was added in WordPress 4.8
+* Support for PHPUnit 7 was added in WordPress 5.1
+* Support for PHPUnit 8 and 9 is coming in WordPress 5.9
+    * See [#46149](https://core.trac.wordpress.org/ticket/46149)
+    * For more information about the loosened restriction for PHPUnit see https://github.com/WordPress/wordpress-develop/commit/8def694fe4c5df95f8e20e40389faf9cb92b6dca
 
 ## Configuration
 
